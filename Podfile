@@ -7,4 +7,5 @@ target 'CarParking' do
   pod 'SideMenu'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Socket.IO-Client-Swift'
 end

@@ -66,6 +66,14 @@
 			name = CustomUI;
 			sourceTree = "<group>";
 		};
+		78D6681A1F18716000C464A6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7892367C1F17DF4D009F3D83 /* SDKAPIKey.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		78F515851F02010B0082CB6E = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +95,15 @@
 		78F515901F02010B0082CB6E /* CarParking */ = {
 			isa = PBXGroup;
 			children = (
-				78D668191F18555400C464A6 /* CustomUI */,
 				7892367B1F17C3FA009F3D83 /* Model */,
 				78F515A41F0203F30082CB6E /* Controller */,
+				78D668191F18555400C464A6 /* CustomUI */,
+				78D6681A1F18716000C464A6 /* Other */,
 				78F515911F02010B0082CB6E /* AppDelegate.swift */,
 				78F515951F02010B0082CB6E /* Main.storyboard */,
 				78D668151F17EC7B00C464A6 /* Assets.xcassets */,
 				78F5159A1F02010B0082CB6E /* LaunchScreen.storyboard */,
 				78F5159D1F02010B0082CB6E /* Info.plist */,
-				7892367C1F17DF4D009F3D83 /* SDKAPIKey.swift */,
 			);
 			path = CarParking;
 			sourceTree = "<group>";
