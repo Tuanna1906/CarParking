@@ -1,23 +1,17 @@
 //
-//  LoginController.swift
+//  ViewController.swift
 //  CarParking
 //
-//  Created by Bonz on 7/14/17.
+//  Created by Bonz on 7/15/17.
 //  Copyright © 2017 Bonz. All rights reserved.
 //
 
 import UIKit
-import SocketIO
 
-class LoginController: UIViewController {
+class ViewController: UIViewController {
 
-    @IBOutlet weak var btn_checkbox: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        btn_checkbox.setImage(UIImage(named: "unchecked_checkbox"), for: .normal)
-        btn_checkbox.setImage(UIImage(named: "checked_checkbox"), for: .selected)
 
         // Do any additional setup after loading the view.
     }
@@ -26,19 +20,15 @@ class LoginController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func clickBtnRemember(_ sender: UIButton) {
-         sender.isSelected = !sender.isSelected
-         print(sender.isSelected)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
     }
-    
-    @IBAction func clickBtnLogin(_ sender: UIButton) {
-        sender.pulsate()
-    }
 
-    @IBAction func clickBtnRegister(_ sender: UIButton) {
-        sender.pulsate()
-    }
     /*
     // MARK: - Navigation
 

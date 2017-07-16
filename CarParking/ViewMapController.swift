@@ -42,12 +42,17 @@ class ViewMapController: UIViewController {
 
     }
     
-    @IBAction func btnSearch(_ sender: Any) {
+    @IBAction func clickBtnSearch(_ sender: Any) {
         let acController = GMSAutocompleteViewController()
         acController.delegate = self
         present(acController, animated: true, completion: nil)
 
     }
+    
+    @IBAction func clickBtnSelect(_ sender: UIButton) {
+        sender.pulsate()
+    }
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
