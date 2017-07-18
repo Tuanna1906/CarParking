@@ -8,4 +8,7 @@ target 'CarParking' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'Socket.IO-Client-Swift'
+  pod 'SwiftyJSON'
+  pod 'CryptoSwift'
+  pod 'SCLAlertView'
 end

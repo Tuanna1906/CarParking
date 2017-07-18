@@ -1,4 +1,5 @@
 PODS:
+  - CryptoSwift (0.6.9)
   - GoogleMaps (2.3.0):
     - GoogleMaps/Maps (= 2.3.0)
   - GoogleMaps/Base (2.3.0)
@@ -6,21 +7,42 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.3.0):
     - GoogleMaps/Base (= 2.3.0)
+  - SCLAlertView (0.7.0)
   - SideMenu (2.3.2)
   - Socket.IO-Client-Swift (10.0.0)
+  - SwiftValidator (4.0.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - CryptoSwift
   - GoogleMaps
   - GooglePlaces
+  - SCLAlertView
   - SideMenu
   - Socket.IO-Client-Swift
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   GooglePlaces: 74d322c74184ea4576184089b496d291cf0dcd38
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
   Socket.IO-Client-Swift: 9c5b4e5e76e30e1b9a1804c40e11dad0a002b1a4
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: df5bb5c84fe2c8fb58f99eafc0cdefb4a85f20f7
+PODFILE CHECKSUM: 5622b12a30a8bc9e9821b75e87dc8ab430c91253
 
 COCOAPODS: 1.2.1

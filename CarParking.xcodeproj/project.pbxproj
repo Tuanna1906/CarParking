@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		549B5DC284A1BE432C5C26E5 /* Pods_CarParking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F8C6EA6400976375DCBD6C /* Pods_CarParking.framework */; };
 		78112F481F1AAD3D004D878C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78112F471F1AAD3D004D878C /* UIButtonExtension.swift */; };
+		78371AAD1F1BD755004575A0 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78371AAC1F1BD755004575A0 /* SocketIOManager.swift */; };
+		78371AAF1F1CCA81004575A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78371AAE1F1CCA81004575A0 /* Constants.swift */; };
 		786B5AB31F1A4C4000144124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B5AB21F1A4C4000144124 /* ViewController.swift */; };
 		788140D21F1ADB0500F11987 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788140D11F1ADB0500F11987 /* CustomView.swift */; };
 		788140D41F1AE49B00F11987 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788140D31F1AE49B00F11987 /* RegisterController.swift */; };
 		788140D61F1AE4F800F11987 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788140D51F1AE4F800F11987 /* ForgotPassController.swift */; };
-		7892367D1F17DF4D009F3D83 /* SDKAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7892367C1F17DF4D009F3D83 /* SDKAPIKey.swift */; };
 		78D668161F17EC7B00C464A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D668151F17EC7B00C464A6 /* Assets.xcassets */; };
 		78D668181F18520300C464A6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D668171F18520300C464A6 /* LoginController.swift */; };
 		78DE829C1F1A99600003A9E1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE829B1F1A99600003A9E1 /* CustomButton.swift */; };
@@ -27,11 +28,12 @@
 		38F8C6EA6400976375DCBD6C /* Pods_CarParking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarParking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAFCFB385B3FA9AB43745E6 /* Pods-CarParking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarParking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarParking/Pods-CarParking.debug.xcconfig"; sourceTree = "<group>"; };
 		78112F471F1AAD3D004D878C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		78371AAC1F1BD755004575A0 /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		78371AAE1F1CCA81004575A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		786B5AB21F1A4C4000144124 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		788140D11F1ADB0500F11987 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		788140D31F1AE49B00F11987 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		788140D51F1AE4F800F11987 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
-		7892367C1F17DF4D009F3D83 /* SDKAPIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKAPIKey.swift; sourceTree = "<group>"; };
 		78D668151F17EC7B00C464A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D668171F18520300C464A6 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		78DE829B1F1A99600003A9E1 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -67,9 +69,18 @@
 		78112F441F1AA8D7004D878C /* CustomAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				78D668191F18555400C464A6 /* CustomUI */,
 				78112F471F1AAD3D004D878C /* UIButtonExtension.swift */,
 			);
 			name = CustomAnimation;
+			sourceTree = "<group>";
+		};
+		78371AAA1F1B6C5D004575A0 /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				78371AAC1F1BD755004575A0 /* SocketIOManager.swift */,
+			);
+			name = SocketIO;
 			sourceTree = "<group>";
 		};
 		7892367B1F17C3FA009F3D83 /* Model */ = {
@@ -91,7 +102,7 @@
 		78D6681A1F18716000C464A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				7892367C1F17DF4D009F3D83 /* SDKAPIKey.swift */,
+				78371AAE1F1CCA81004575A0 /* Constants.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -118,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				78112F441F1AA8D7004D878C /* CustomAnimation */,
-				78D668191F18555400C464A6 /* CustomUI */,
+				78371AAA1F1B6C5D004575A0 /* SocketIO */,
 				7892367B1F17C3FA009F3D83 /* Model */,
 				78F515A41F0203F30082CB6E /* Controller */,
 				78D6681A1F18716000C464A6 /* Other */,
@@ -283,9 +294,10 @@
 				78F515921F02010B0082CB6E /* AppDelegate.swift in Sources */,
 				78DE829C1F1A99600003A9E1 /* CustomButton.swift in Sources */,
 				78D668181F18520300C464A6 /* LoginController.swift in Sources */,
-				7892367D1F17DF4D009F3D83 /* SDKAPIKey.swift in Sources */,
 				78F515A61F0204E90082CB6E /* ViewMapController.swift in Sources */,
 				788140D41F1AE49B00F11987 /* RegisterController.swift in Sources */,
+				78371AAD1F1BD755004575A0 /* SocketIOManager.swift in Sources */,
+				78371AAF1F1CCA81004575A0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

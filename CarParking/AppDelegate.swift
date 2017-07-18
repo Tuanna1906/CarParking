@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          * CODE
          *
          */
-        
-        if kMapsAPIKey.isEmpty || kPlacesAPIKey.isEmpty {
+        if Constants.GoogleMapApi.kMapsAPIKey.isEmpty || Constants.GoogleMapApi.kPlacesAPIKey.isEmpty {
             // Blow up if API keys have not yet been set.
             let bundleId = Bundle.main.bundleIdentifier!
             let msg = "Configure API keys inside SDKDemoAPIKey.swift for your  bundle `\(bundleId)`, " +
@@ -31,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError(msg)
         }
         
-        GMSPlacesClient.provideAPIKey(kPlacesAPIKey)
-        GMSServices.provideAPIKey(kMapsAPIKey)
+        GMSPlacesClient.provideAPIKey(Constants.GoogleMapApi.kPlacesAPIKey)
+        GMSServices.provideAPIKey(Constants.GoogleMapApi.kMapsAPIKey)
         return true
     }
 
@@ -44,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        SocketIOManager.sharedInstance.closeConnection()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        SocketIOManager.sharedInstance.establishConnection()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

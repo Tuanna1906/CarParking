@@ -153,6 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="customViewInfo" destination="608-bj-mAy" id="HT3-YF-Q8n"/>
                         <outlet property="mapView" destination="K51-rI-68n" id="N0K-f7-CsY"/>
                     </connections>
                 </viewController>
@@ -164,7 +165,7 @@
         <scene sceneID="uRx-gX-9mY">
             <objects>
                 <navigationController storyboardIdentifier="LeftMenuNavigationController" navigationBarHidden="YES" id="cFp-lS-kAj" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUb-0i-iM7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UUb-0i-iM7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -207,6 +208,12 @@
                                     <segue destination="jsm-as-QuW" kind="show" id="421-kE-A1d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfW-vL-iQS">
+                                <rect key="frame" x="307" y="613" width="48" height="34"/>
+                                <state key="normal" title="Thoát">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -214,8 +221,10 @@
                             <constraint firstItem="gu2-ti-kFS" firstAttribute="top" secondItem="ICo-cd-bTK" secondAttribute="bottom" constant="17" id="JVP-fY-kbh"/>
                             <constraint firstAttribute="trailing" secondItem="ICo-cd-bTK" secondAttribute="trailing" id="NLG-cx-9Y6"/>
                             <constraint firstItem="ICo-cd-bTK" firstAttribute="leading" secondItem="L59-Bn-DQB" secondAttribute="leading" id="gKN-al-Mnr"/>
+                            <constraint firstAttribute="bottom" secondItem="WfW-vL-iQS" secondAttribute="bottom" constant="20" id="lPz-V3-z6m"/>
                             <constraint firstItem="gu2-ti-kFS" firstAttribute="leading" secondItem="L59-Bn-DQB" secondAttribute="leadingMargin" id="n4X-Zc-3zM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gu2-ti-kFS" secondAttribute="trailing" id="rl0-Tg-a3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="WfW-vL-iQS" secondAttribute="trailing" constant="20" id="tnF-lR-hoh"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -298,7 +307,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clickBtnLogin:" destination="kns-ih-hfp" eventType="touchUpInside" id="S7J-Lu-jrr"/>
-                                    <segue destination="ZCY-eW-Pz0" kind="show" id="d4V-cE-35z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yss-Y3-6rD" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
@@ -386,6 +394,8 @@
                     <navigationItem key="navigationItem" id="H2D-M0-kYp"/>
                     <connections>
                         <outlet property="btn_checkbox" destination="T1E-cp-LyO" id="lyF-9A-rlT"/>
+                        <outlet property="txtEmail" destination="vYM-gz-2ZB" id="hnq-er-VMG"/>
+                        <outlet property="txtPassword" destination="gt7-sX-wIO" id="uXg-mI-MOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0h-0O-eAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,9 +405,9 @@
         <!--Navigation Controller-->
         <scene sceneID="NPH-MO-TEG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZCY-eW-Pz0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapViewScreen" automaticallyAdjustsScrollViewInsets="NO" id="ZCY-eW-Pz0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Ar-IR-GzQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2Ar-IR-GzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -473,6 +483,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickBtnRegister:" destination="GQO-Mf-BZQ" eventType="touchUpInside" id="yUF-tI-P2E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnR-if-jin" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                 <rect key="frame" x="30" y="428.5" width="315" height="50"/>
@@ -523,6 +536,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oHk-Bo-Ieg"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="Y0E-ic-Exp" id="5Mt-Je-cSc"/>
+                        <outlet property="txtPassword" destination="Bf3-tU-0w6" id="4nc-WP-7ok"/>
+                        <outlet property="txtRePassword" destination="4kT-LY-Bia" id="NL5-v8-p71"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Id-5S-apV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -572,6 +590,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickBtnLayLaiMatKhau:" destination="hXo-n1-WNK" eventType="touchUpInside" id="StZ-Ap-3w2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYZ-cq-RVy" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                 <rect key="frame" x="30" y="368.5" width="315" height="50"/>
@@ -616,6 +637,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="17c-6d-iGM"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="bG9-ab-WjI" id="MkV-6K-USS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHD-XD-yKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

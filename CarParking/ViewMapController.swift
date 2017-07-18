@@ -13,7 +13,9 @@ import GooglePlaces
 
 class ViewMapController: UIViewController {
 
+    //========== IBOutlet ====================================================
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var customViewInfo: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class ViewMapController: UIViewController {
         setupSideMenu()
         let camera = GMSCameraPosition.camera(withLatitude: 21.025817, longitude: 105.851701, zoom: 10)
         mapView.camera = camera
+        
+        dropShadow(customViewInfo)
         
     }
     
@@ -42,6 +46,7 @@ class ViewMapController: UIViewController {
 
     }
     
+    //========== IBAction ====================================================
     @IBAction func clickBtnSearch(_ sender: Any) {
         let acController = GMSAutocompleteViewController()
         acController.delegate = self
@@ -53,7 +58,22 @@ class ViewMapController: UIViewController {
         sender.pulsate()
     }
     
-    
+    //========== Function ====================================================
+    func dropShadow(_ view: UIView) {
+        
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowOffset = CGSize.zero
+        view.layer.shadowRadius = 10
+        view.layer.masksToBounds = false
+        
+        
+        view.layer.shadowPath = UIBezierPath(rect: view.bounds).cgPath
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
+        //view.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,8 +83,6 @@ class ViewMapController: UIViewController {
 
     }
    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
