@@ -103,26 +103,18 @@ class SecurityManagerController: UIViewController,  UITableViewDelegate, UITable
         if editingStyle == .delete
         {
             
-//            SocketIOManager.sharedInstance.socket.emit(Constants.Account.REQUEST_REMOVE_ACCOUNT_BY_ID, self.filteredDate[indexPath.row].accountID)
-//            SocketIOManager.sharedInstance.socket.on(Constants.Account.RESPONSE_REMOVE_ACCOUNT_BY_ID, callback: { (data, ask) in
-//                
-//                let json = JSON(data)[0]
-//                print(json)
-//                if(json["result"].boolValue == true){
-//                    var index:Int = -1
-//                    
-//                    for i in 0 ..< self.arrGarage.count {
-//                        if self.arrGarage[i].id == self.filteredDate[indexPath.row].id{
-//                            index = i
-//                        }
-//                    }
-//                    self.arrGarage.remove(at: index)
-//                    self.filteredDate.remove(at: indexPath.row)
-//                    self.tableView.reloadData()
-//                }
-//                
-//                SocketIOManager.sharedInstance.socket.off(Constants.Account.RESPONSE_REMOVE_ACCOUNT_BY_ID)
-//            })
+            SocketIOManager.sharedInstance.socket.emit(Constants.Account.REQUEST_REMOVE_ACCOUNT_BY_ID, self.arrSecurity[indexPath.row].id)
+            SocketIOManager.sharedInstance.socket.on(Constants.Account.RESPONSE_REMOVE_ACCOUNT_BY_ID, callback: { (data, ask) in
+                
+                let json = JSON(data)[0]
+                print(json)
+                if(json["result"].boolValue == true){
+                    self.arrSecurity.remove(at: indexPath.row)
+                    self.tableView.reloadData()
+                }
+                
+                SocketIOManager.sharedInstance.socket.off(Constants.Account.RESPONSE_REMOVE_ACCOUNT_BY_ID)
+            })
             
         }
     }

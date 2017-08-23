@@ -27,6 +27,9 @@
 		7843AF091F4CFD4300CACB6D /* SecurityOfGarage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843AF081F4CFD4300CACB6D /* SecurityOfGarage.swift */; };
 		7843AF0B1F4D130D00CACB6D /* ProfileAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843AF0A1F4D130D00CACB6D /* ProfileAdminController.swift */; };
 		7843AF0D1F4D179E00CACB6D /* BookingInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7843AF0C1F4D179E00CACB6D /* BookingInfoController.swift */; };
+		784BF1C81F4DFE4D00441E7C /* ChangePasswordUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF1C71F4DFE4D00441E7C /* ChangePasswordUserController.swift */; };
+		784BF1CA1F4E039900441E7C /* ChangePasswordSecurityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF1C91F4E039900441E7C /* ChangePasswordSecurityController.swift */; };
+		784BF1CC1F4E057100441E7C /* ChangePasswordAdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF1CB1F4E057100441E7C /* ChangePasswordAdminController.swift */; };
 		7850A7591F4A35A700ABD755 /* CheckOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850A7581F4A35A700ABD755 /* CheckOutController.swift */; };
 		7850A75B1F4A35FD00ABD755 /* CustomCheckOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850A75A1F4A35FD00ABD755 /* CustomCheckOutCell.swift */; };
 		7850A75D1F4A3F3B00ABD755 /* ProfileSecurityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850A75C1F4A3F3B00ABD755 /* ProfileSecurityController.swift */; };
@@ -84,6 +87,9 @@
 		7843AF081F4CFD4300CACB6D /* SecurityOfGarage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityOfGarage.swift; sourceTree = "<group>"; };
 		7843AF0A1F4D130D00CACB6D /* ProfileAdminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAdminController.swift; sourceTree = "<group>"; };
 		7843AF0C1F4D179E00CACB6D /* BookingInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingInfoController.swift; sourceTree = "<group>"; };
+		784BF1C71F4DFE4D00441E7C /* ChangePasswordUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordUserController.swift; sourceTree = "<group>"; };
+		784BF1C91F4E039900441E7C /* ChangePasswordSecurityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordSecurityController.swift; sourceTree = "<group>"; };
+		784BF1CB1F4E057100441E7C /* ChangePasswordAdminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordAdminController.swift; sourceTree = "<group>"; };
 		7850A7581F4A35A700ABD755 /* CheckOutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutController.swift; sourceTree = "<group>"; };
 		7850A75A1F4A35FD00ABD755 /* CustomCheckOutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCheckOutCell.swift; sourceTree = "<group>"; };
 		7850A75C1F4A3F3B00ABD755 /* ProfileSecurityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSecurityController.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				7843AF001F4CC88200CACB6D /* RegisterSecurityController.swift */,
 				7843AF021F4CC8A800CACB6D /* DetailSecurityController.swift */,
 				7843AF0A1F4D130D00CACB6D /* ProfileAdminController.swift */,
+				784BF1CB1F4E057100441E7C /* ChangePasswordAdminController.swift */,
 			);
 			name = Admin;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 				78A48E8D1F432EFB009780B6 /* ManagerCarController.swift */,
 				78B87A801F468E1700371FD2 /* CancelBookingController.swift */,
 				7843AF0C1F4D179E00CACB6D /* BookingInfoController.swift */,
+				784BF1C71F4DFE4D00441E7C /* ChangePasswordUserController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				787CBA1C1F495D16008B6E29 /* CheckInController.swift */,
 				7850A7581F4A35A700ABD755 /* CheckOutController.swift */,
 				7850A75C1F4A3F3B00ABD755 /* ProfileSecurityController.swift */,
+				784BF1C91F4E039900441E7C /* ChangePasswordSecurityController.swift */,
 			);
 			name = Security;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 				7843AF071F4CCA7500CACB6D /* CustomSecurityCell.swift in Sources */,
 				787CBA211F4A10A3008B6E29 /* CheckInParkingInfo.swift in Sources */,
 				788140D61F1AE4F800F11987 /* ForgotPassController.swift in Sources */,
+				784BF1CA1F4E039900441E7C /* ChangePasswordSecurityController.swift in Sources */,
 				78B87A7D1F44B3DB00371FD2 /* Account.swift in Sources */,
 				7850A75B1F4A35FD00ABD755 /* CustomCheckOutCell.swift in Sources */,
 				7843AF051F4CCA4D00CACB6D /* CustomHistoryOfGarageCell.swift in Sources */,
@@ -460,6 +470,7 @@
 				78A48E941F434EC6009780B6 /* CustomManagerCarCell.swift in Sources */,
 				78112F481F1AAD3D004D878C /* UIButtonExtension.swift in Sources */,
 				7843AF0D1F4D179E00CACB6D /* BookingInfoController.swift in Sources */,
+				784BF1C81F4DFE4D00441E7C /* ChangePasswordUserController.swift in Sources */,
 				7850A7591F4A35A700ABD755 /* CheckOutController.swift in Sources */,
 				78CD5AD21F32E6ED007D609D /* ProfileController.swift in Sources */,
 				78A48E8E1F432EFB009780B6 /* ManagerCarController.swift in Sources */,
@@ -483,6 +494,7 @@
 				7866CD9A1F329A5000B2C5E4 /* NearestPlaceController.swift in Sources */,
 				788140D41F1AE49B00F11987 /* RegisterController.swift in Sources */,
 				7843AF031F4CC8A800CACB6D /* DetailSecurityController.swift in Sources */,
+				784BF1CC1F4E057100441E7C /* ChangePasswordAdminController.swift in Sources */,
 				7843AEFA1F4C368D00CACB6D /* RegisterGarageController.swift in Sources */,
 				786747C41F43CFC500CB2091 /* HistoryParkingInfo.swift in Sources */,
 				78371AAD1F1BD755004575A0 /* SocketIOManager.swift in Sources */,

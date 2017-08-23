@@ -1081,6 +1081,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="ChangePasswordTapped:" destination="0yr-7f-w3u" eventType="touchUpInside" id="sgb-nw-tUf"/>
+                                                    <segue destination="oEf-NJ-aBO" kind="show" id="Py5-xO-b6q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-Ff-viF" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
@@ -1584,7 +1585,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Id-5S-apV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-908" y="-161"/>
+            <point key="canvasLocation" x="-908" y="-151"/>
         </scene>
         <!--Forgot Pass Controller-->
         <scene sceneID="dmh-Gn-ZCC">
@@ -1952,7 +1953,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVS-0f-lks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="-1974"/>
+            <point key="canvasLocation" x="3033" y="-2081"/>
         </scene>
         <!--Thông tin-->
         <scene sceneID="jc7-Ab-PIW">
@@ -2161,6 +2162,9 @@
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="UpdateInfoTapped:" destination="Rjx-MN-Nzw" eventType="touchUpInside" id="U8K-ad-pec"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-bc-X1f" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="589" width="359" height="45"/>
@@ -2177,6 +2181,10 @@
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ChangePasswordTapped:" destination="Rjx-MN-Nzw" eventType="touchUpInside" id="lqx-kJ-wb8"/>
+                                                    <segue destination="n8q-V3-2Ko" kind="show" id="EL4-5S-15v"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-gU-hCk" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="644" width="359" height="45"/>
@@ -2255,6 +2263,15 @@
                     <tabBarItem key="tabBarItem" title="Thông tin" image="ic_profile" id="AoN-VU-HTh"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="720"/>
+                    <connections>
+                        <outlet property="btnUpdate" destination="BhR-iG-mPf" id="wgF-6H-OYk"/>
+                        <outlet property="lblAddress" destination="fzT-Xh-mKa" id="dtY-65-o9P"/>
+                        <outlet property="lblBirthDay" destination="F5W-XV-nQH" id="1wD-eT-p1j"/>
+                        <outlet property="lblEmail" destination="mce-eK-gSP" id="sbm-ro-J7e"/>
+                        <outlet property="lblFirstName" destination="sDZ-de-4Uf" id="8N6-et-Klj"/>
+                        <outlet property="lblLastName" destination="y7I-BW-MVG" id="oPh-5k-Q1d"/>
+                        <outlet property="lblPhone" destination="li5-hO-AvC" id="Bja-eT-khM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwc-6r-c04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2938,7 +2955,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfH-0V-E2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2102" y="-1974"/>
+            <point key="canvasLocation" x="2102" y="-2081"/>
         </scene>
         <!--Đăng ký-->
         <scene sceneID="gqw-qL-Kpu">
@@ -3464,6 +3481,9 @@
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="UpdateInfoTapped:" destination="jR5-l2-mxY" eventType="touchUpInside" id="NVc-bZ-xm5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypK-1G-plR" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="589" width="359" height="45"/>
@@ -3480,6 +3500,10 @@
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ChangePasswordTapped:" destination="jR5-l2-mxY" eventType="touchUpInside" id="Nny-mS-jqR"/>
+                                                    <segue destination="Kfv-PV-9Cr" kind="show" id="BDg-YX-rSk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-hK-abN" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="644" width="359" height="45"/>
@@ -3558,6 +3582,15 @@
                     <tabBarItem key="tabBarItem" title="Thông tin" image="ic_profile" id="Zoo-TD-x4t"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="720"/>
+                    <connections>
+                        <outlet property="btnUpdate" destination="TJL-oa-0Ir" id="6N7-Gh-Nnd"/>
+                        <outlet property="lblAddress" destination="5Ll-2e-GnI" id="G2u-u9-Uo5"/>
+                        <outlet property="lblBirthDay" destination="0F1-iO-nVh" id="xKw-km-C02"/>
+                        <outlet property="lblEmail" destination="88Y-OB-ccF" id="1on-JG-Th1"/>
+                        <outlet property="lblFirstName" destination="UPa-wJ-9Hr" id="aqa-5K-Llb"/>
+                        <outlet property="lblLastName" destination="cxS-C1-hkM" id="CP0-j8-VLK"/>
+                        <outlet property="lblPhone" destination="B3H-Ts-rsd" id="cjn-dx-kl0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2b-75-DhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3718,7 +3751,331 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7h-SA-5aX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3785" y="960"/>
+            <point key="canvasLocation" x="3784.8000000000002" y="959.37031484257875"/>
+        </scene>
+        <!--Change Password User Controller-->
+        <scene sceneID="6tS-8A-Fig">
+            <objects>
+                <viewController id="oEf-NJ-aBO" customClass="ChangePasswordUserController" customModule="CarParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vEB-2t-UXe"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZP-hH-C6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7iN-47-Pkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaH-ss-Uam">
+                                <rect key="frame" x="30" y="305" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Cvg-Ut-r5B"/>
+                                    <constraint firstAttribute="height" constant="50" id="RIw-tt-MaZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BfT-Uk-ywu">
+                                <rect key="frame" x="30" y="245" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A3k-V3-1an"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4G-cU-ChJ" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="365" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jMF-vI-3Uk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THAY ĐÔI MẬT KHẨU">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ChangePassTapped:" destination="oEf-NJ-aBO" eventType="touchUpInside" id="3gK-XQ-Zp4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um5-E6-Syw" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="425" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pn1-fK-vOT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THOÁT">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="CancelTapped:" destination="oEf-NJ-aBO" eventType="touchUpInside" id="RZ1-aQ-0JZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BfT-Uk-ywu" firstAttribute="centerY" secondItem="7iN-47-Pkh" secondAttribute="centerY" constant="-90" id="59C-Y2-jjO"/>
+                            <constraint firstItem="UaH-ss-Uam" firstAttribute="centerY" secondItem="7iN-47-Pkh" secondAttribute="centerY" constant="-30" id="BRh-Sl-4gH"/>
+                            <constraint firstItem="w4G-cU-ChJ" firstAttribute="centerY" secondItem="7iN-47-Pkh" secondAttribute="centerY" constant="30" id="H0a-Zb-WM9"/>
+                            <constraint firstItem="BfT-Uk-ywu" firstAttribute="leading" secondItem="7iN-47-Pkh" secondAttribute="leading" constant="30" id="Vo1-YW-Y6v"/>
+                            <constraint firstItem="w4G-cU-ChJ" firstAttribute="leading" secondItem="7iN-47-Pkh" secondAttribute="leading" constant="30" id="W5i-9R-OJq"/>
+                            <constraint firstAttribute="trailing" secondItem="um5-E6-Syw" secondAttribute="trailing" constant="30" id="cgY-ns-zUb"/>
+                            <constraint firstItem="um5-E6-Syw" firstAttribute="leading" secondItem="7iN-47-Pkh" secondAttribute="leading" constant="30" id="d3w-tu-iwd"/>
+                            <constraint firstItem="um5-E6-Syw" firstAttribute="centerY" secondItem="7iN-47-Pkh" secondAttribute="centerY" constant="90" id="nHe-CU-dT3"/>
+                            <constraint firstAttribute="trailing" secondItem="w4G-cU-ChJ" secondAttribute="trailing" constant="30" id="nQA-IN-h6M"/>
+                            <constraint firstItem="UaH-ss-Uam" firstAttribute="leading" secondItem="7iN-47-Pkh" secondAttribute="leading" constant="30" id="p9a-fR-rGE"/>
+                            <constraint firstAttribute="trailing" secondItem="UaH-ss-Uam" secondAttribute="trailing" constant="30" id="qZd-9Z-74G"/>
+                            <constraint firstAttribute="trailing" secondItem="BfT-Uk-ywu" secondAttribute="trailing" constant="30" id="wLA-3L-SMZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7nr-bu-XVK"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="BfT-Uk-ywu" id="Vp9-AA-dPC"/>
+                        <outlet property="txtRePassword" destination="UaH-ss-Uam" id="7HQ-ir-QXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkS-RD-a3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878" y="2600"/>
+        </scene>
+        <!--Change Password Security Controller-->
+        <scene sceneID="axl-1Z-s1L">
+            <objects>
+                <viewController id="n8q-V3-2Ko" customClass="ChangePasswordSecurityController" customModule="CarParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e39-w3-etA"/>
+                        <viewControllerLayoutGuide type="bottom" id="OPJ-dD-VEU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uNv-dh-sho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-Fr-FqH">
+                                <rect key="frame" x="30" y="305" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="N3g-QC-jiY"/>
+                                    <constraint firstAttribute="height" constant="50" id="uFH-fB-TsO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-TP-PRy">
+                                <rect key="frame" x="30" y="245" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QOd-H4-KE0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCX-eE-gXv" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="365" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wV5-ha-RZm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THAY ĐÔI MẬT KHẨU">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ChangePassTapped:" destination="n8q-V3-2Ko" eventType="touchUpInside" id="wPK-PJ-V6V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ba-wL-Jxf" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="425" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zib-SN-8Or"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THOÁT">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="CancelTapped:" destination="n8q-V3-2Ko" eventType="touchUpInside" id="I66-po-v4a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UCX-eE-gXv" secondAttribute="trailing" constant="30" id="2Fa-FU-MwJ"/>
+                            <constraint firstItem="j7q-TP-PRy" firstAttribute="centerY" secondItem="uNv-dh-sho" secondAttribute="centerY" constant="-90" id="9SO-ji-A0m"/>
+                            <constraint firstAttribute="trailing" secondItem="j7q-TP-PRy" secondAttribute="trailing" constant="30" id="GeH-AQ-PEr"/>
+                            <constraint firstAttribute="trailing" secondItem="zB1-Fr-FqH" secondAttribute="trailing" constant="30" id="IaZ-sy-qes"/>
+                            <constraint firstItem="zB1-Fr-FqH" firstAttribute="leading" secondItem="uNv-dh-sho" secondAttribute="leading" constant="30" id="Leh-n3-GyI"/>
+                            <constraint firstItem="UCX-eE-gXv" firstAttribute="leading" secondItem="uNv-dh-sho" secondAttribute="leading" constant="30" id="Nea-nM-gVG"/>
+                            <constraint firstItem="1Ba-wL-Jxf" firstAttribute="leading" secondItem="uNv-dh-sho" secondAttribute="leading" constant="30" id="SOS-RR-UFp"/>
+                            <constraint firstItem="UCX-eE-gXv" firstAttribute="centerY" secondItem="uNv-dh-sho" secondAttribute="centerY" constant="30" id="hcR-ML-aQ5"/>
+                            <constraint firstItem="1Ba-wL-Jxf" firstAttribute="centerY" secondItem="uNv-dh-sho" secondAttribute="centerY" constant="90" id="iKt-44-mFE"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ba-wL-Jxf" secondAttribute="trailing" constant="30" id="o8R-X9-wVc"/>
+                            <constraint firstItem="j7q-TP-PRy" firstAttribute="leading" secondItem="uNv-dh-sho" secondAttribute="leading" constant="30" id="xh3-jC-Gie"/>
+                            <constraint firstItem="zB1-Fr-FqH" firstAttribute="centerY" secondItem="uNv-dh-sho" secondAttribute="centerY" constant="-30" id="zc2-dD-uiA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pbe-DZ-wIi"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="j7q-TP-PRy" id="XnL-mt-0B0"/>
+                        <outlet property="txtRePassword" destination="zB1-Fr-FqH" id="tKL-QD-UDs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgg-F2-P0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647" y="190"/>
+        </scene>
+        <!--Change Password Admin Controller-->
+        <scene sceneID="to9-7E-X5D">
+            <objects>
+                <viewController id="Kfv-PV-9Cr" customClass="ChangePasswordAdminController" customModule="CarParking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zT-GI-y8c"/>
+                        <viewControllerLayoutGuide type="bottom" id="FVI-wq-du5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qeb-TF-C3n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7X-I4-As8">
+                                <rect key="frame" x="30" y="305" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3we-FS-HCD"/>
+                                    <constraint firstAttribute="height" constant="50" id="vaZ-Ad-bf0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Nhập mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqL-Ij-K1q">
+                                <rect key="frame" x="30" y="245" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PYv-17-gYQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7b8-xm-iN0" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="365" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hXr-dO-uag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THAY ĐÔI MẬT KHẨU">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ChangePassTapped:" destination="Kfv-PV-9Cr" eventType="touchUpInside" id="Vs2-m3-qWG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U93-nQ-GYc" customClass="CustomButton" customModule="CarParking" customModuleProvider="target">
+                                <rect key="frame" x="30" y="425" width="315" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VeT-jz-Jv7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="THOÁT">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="CancelTapped:" destination="Kfv-PV-9Cr" eventType="touchUpInside" id="8XO-37-Rff"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZqL-Ij-K1q" firstAttribute="centerY" secondItem="Qeb-TF-C3n" secondAttribute="centerY" constant="-90" id="2fZ-7E-LEG"/>
+                            <constraint firstAttribute="trailing" secondItem="7b8-xm-iN0" secondAttribute="trailing" constant="30" id="7tV-Ze-hjL"/>
+                            <constraint firstAttribute="trailing" secondItem="ZqL-Ij-K1q" secondAttribute="trailing" constant="30" id="D7Y-r4-M1x"/>
+                            <constraint firstItem="7b8-xm-iN0" firstAttribute="leading" secondItem="Qeb-TF-C3n" secondAttribute="leading" constant="30" id="HOO-4G-exT"/>
+                            <constraint firstItem="U93-nQ-GYc" firstAttribute="centerY" secondItem="Qeb-TF-C3n" secondAttribute="centerY" constant="90" id="IC1-ac-5GO"/>
+                            <constraint firstItem="ZqL-Ij-K1q" firstAttribute="leading" secondItem="Qeb-TF-C3n" secondAttribute="leading" constant="30" id="gU1-3S-4VC"/>
+                            <constraint firstAttribute="trailing" secondItem="U93-nQ-GYc" secondAttribute="trailing" constant="30" id="h2j-YI-Z56"/>
+                            <constraint firstAttribute="trailing" secondItem="R7X-I4-As8" secondAttribute="trailing" constant="30" id="o6J-Eb-Uib"/>
+                            <constraint firstItem="R7X-I4-As8" firstAttribute="centerY" secondItem="Qeb-TF-C3n" secondAttribute="centerY" constant="-30" id="pEE-Hl-IZK"/>
+                            <constraint firstItem="7b8-xm-iN0" firstAttribute="centerY" secondItem="Qeb-TF-C3n" secondAttribute="centerY" constant="30" id="sML-i8-yzJ"/>
+                            <constraint firstItem="R7X-I4-As8" firstAttribute="leading" secondItem="Qeb-TF-C3n" secondAttribute="leading" constant="30" id="wKM-UO-Mbf"/>
+                            <constraint firstItem="U93-nQ-GYc" firstAttribute="leading" secondItem="Qeb-TF-C3n" secondAttribute="leading" constant="30" id="xSu-1Z-Rsg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5NJ-Ue-goO"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="ZqL-Ij-K1q" id="tNZ-fR-2H5"/>
+                        <outlet property="txtRePassword" destination="R7X-I4-As8" id="ijl-Tv-1qx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ldo-IP-jYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="-1380"/>
         </scene>
     </scenes>
     <resources>

@@ -41,6 +41,9 @@ struct Constants {
         
         static let REQUEST_CREATE_ACCOUNT_SECURITY = "request_create_new_account_for_security"
         static let RESPONSE_CREATE_ACCOUNT_SECURITY = "response_create_new_account_for_security"
+        
+        static let REQUEST_LOG_OUT = "request_log_out"
+        static let RESPONSE_LOG_OUT = "response_log_out"
     }
     
     struct Garage {

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SCLAlertView
 
 class ProfileController: UIViewController {
     
@@ -20,6 +21,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var btnUpdate: CustomButton!
     
     var isEdit = false
+    var userID = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,28 @@ class ProfileController: UIViewController {
     
     @IBAction func UpdateInfoTapped(_ sender: UIButton) {
         sender.pulsate()
+        let lastName =  self.lblLastName.text
+        let firstName = self.lblFirstName.text
+        let birthDay = self.lblBirthDay.text
+        let address = self.lblAddress.text
+        let phone = self.lblPhone.text
+        
+        SocketIOManager.sharedInstance.socket.emit(Constants.USER.REQUEST_EDIT_USER_BY_ID, self.userID, firstName!, lastName!, birthDay!, phone!, address!)
+        SocketIOManager.sharedInstance.socket.on(Constants.USER.RESPONSE_EDIT_USER_BY_ID, callback: { (data, ask) in
+            
+            let json = JSON(data)[0]
+            print(json)
+            if json["result"].boolValue == true {
+                self.showAlertSuccess(title:"", subTitle:"Cập nhật thông tin thành công", button:"Đóng")
+                self.editInfo(false)
+            }
+            
+            
+            
+            SocketIOManager.sharedInstance.socket.off(Constants.USER.RESPONSE_EDIT_USER_BY_ID)
+        })
+
+        
     }
     
     @IBAction func ChangePasswordTapped(_ sender: UIButton) {
@@ -48,8 +72,22 @@ class ProfileController: UIViewController {
     
     @IBAction func clickBtnLogout(_ sender: UIButton) {
         sender.pulsate()
-        self.resetInstances()
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        SocketIOManager.sharedInstance.socket.emit(Constants.Account.REQUEST_LOG_OUT, Instances.sharedInstance.accountID)
+        SocketIOManager.sharedInstance.socket.on(Constants.Account.RESPONSE_LOG_OUT, callback: { (data, ask) in
+            
+            let json = JSON(data)[0]
+            if json["result"].boolValue == true {
+                self.resetInstances()
+                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+            }
+            
+            
+            
+            SocketIOManager.sharedInstance.socket.off(Constants.Account.RESPONSE_LOG_OUT)
+        })
+
+        
+        
     }
     func resetInstances() {
         Instances.sharedInstance.accountID = -1
@@ -67,6 +105,7 @@ class ProfileController: UIViewController {
             
             let json = JSON(data)[0]
             if json["result"].boolValue == true {
+                self.userID = json["data"][0]["id"].intValue
                 self.lblLastName.text = json["data"][0]["lastName"].stringValue
                 self.lblFirstName.text = json["data"][0]["firstName"].stringValue
                 self.lblAddress.text = json["data"][0]["address"].stringValue
@@ -134,6 +173,17 @@ class ProfileController: UIViewController {
             self.lblPhone.isUserInteractionEnabled = true
             self.lblEmail.isUserInteractionEnabled = false
         }
+    }
+    
+    func showAlertSuccess(title:String, subTitle:String, button:String) -> Void {
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false
+        )
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.addButton(button) {
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertView.showSuccess(title, subTitle: subTitle)
     }
     
     

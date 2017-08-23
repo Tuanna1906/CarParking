@@ -46,8 +46,22 @@ class SuperAdminController: UIViewController , UITableViewDelegate, UITableViewD
     
     
     @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
-        self.resetInstances()
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+//        self.resetInstances()
+//        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        SocketIOManager.sharedInstance.socket.emit(Constants.Account.REQUEST_LOG_OUT, Instances.sharedInstance.accountID)
+        SocketIOManager.sharedInstance.socket.on(Constants.Account.RESPONSE_LOG_OUT, callback: { (data, ask) in
+            
+            let json = JSON(data)[0]
+            if json["result"].boolValue == true {
+                self.resetInstances()
+                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+            }
+            
+            
+            
+            SocketIOManager.sharedInstance.socket.off(Constants.Account.RESPONSE_LOG_OUT)
+        })
+
     }
     func resetInstances() {
         Instances.sharedInstance.accountID = -1
