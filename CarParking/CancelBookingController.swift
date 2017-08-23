@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  CancelBookingController.swift
 //  CarParking
 //
-//  Created by Bonz on 7/15/17.
+//  Created by Bonz on 8/18/17.
 //  Copyright © 2017 Bonz. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CancelBookingController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        
-    }
 
     /*
     // MARK: - Navigation

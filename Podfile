@@ -11,4 +11,7 @@ target 'CarParking' do
   pod 'SwiftyJSON'
   pod 'CryptoSwift'
   pod 'SCLAlertView'
+  pod 'Alamofire'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

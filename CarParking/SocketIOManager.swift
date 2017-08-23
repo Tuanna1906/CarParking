@@ -8,8 +8,6 @@
 
 import UIKit
 import SocketIO
-import SwiftyJSON
-import SCLAlertView
 
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
